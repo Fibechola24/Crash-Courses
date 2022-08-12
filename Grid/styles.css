@@ -4,7 +4,84 @@ body {
 .container {
   border: 6px solid black;
   display: grid;
+  height: 400px;
+
+  /* 18 grid container properties */
+  /*display can be inline-grid or grid  */
+
+  /* grid-template-columns, use to create different columns of different sizes, repeat(3, 200px), 1fr, 2fr, 3fr  :  */
+  /*grid-template-columns functions; repeat(3, minmax(200px, 1fr))  */
+
+  /* grid-template-columns: 200px 200px 200px;
+ */
+/* grid-template-columns: repeat(3, minmax(200px, 1fr));  at 200px they stop shrinking and overflows */
+/*grid-template-rows specifies the number of rows. this specifies the height of the rows  */
+/* grid-template-rows: repeat(3, 100px);   */
+/* grid-template-rows: repeat(3, 100px) 200px;
+grid-template-rows: repeat(3, 1fr);   repeat one fraction 3 times to fill up the available space */
+
+
+/* grid-template; a shorthard for both rows and columns. the first specification is for rows and the second for columns */
+grid-template: repeat(3, 1fr) / repeat(3, minmax(200px, 1fr));
+
+
+/* column gap */
+/* column-gap: 30px;
+row-gap: 20px;
+gap: 40px 30px;   shorthard for both */
+
+
+
+/* alignment: start, end, center */
+/* justify-items: start;
+justify-items: center;
+
+/*align-items: center  */
+/* align-items: center; */
+
+/* shorthand for both align items and justify use place-items: we can also use center  */ 
+/* place-items: start end;
+place-items: center; */
+
+
+/* justify-content: end, center, space-between, space-around, space-evenly  */
+/* grid-template: repeat(3, 200px) / repeat(3, 200px);
+/* justify-content: center; */
+/* justify-content: space-around;
+justify-content: space-evenly;  */
+
+
+/* align-content (for rows): center, space-between, space-around, space-evenly */
+/* align-content: space-evenly; */
+
+/*shorthand for align and justify is place-content:   */
+/* place-content: start end;
+place-content: center; */
+
+
+/*grid auto-flow: column  */
+/* grid-auto-flow: column; */
+
+/*grid auto-column: 100px  */
+/*grid auto-rows:200px  */
+
+/* grid-auto-rows: 200px; */
 }
+
+
+/*grid item properties */
+/*grid-column-start  */
+/* grid-column-end */
+
+/*align items within a cell propertie include  */
+/*justify-self: start, end, center,  */
+/*align-self: start, end, center  */
+
+/*shorthand  */
+/*place-self: start end  */
+
+
+
 .grid-item {
   color: white;
   font-size: 1.5rem;
@@ -13,9 +90,18 @@ body {
 }
 .item-1 {
   background-color: #b4bf35;
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+
+  /* shorthand will be */
+  grid-column: 1 / span 2;
+
+
+  
 }
 .item-2 {
   background-color: #b95f21;
+  grid-row-end: span 2;
 }
 .item-3 {
   background-color: #1c4c56;
