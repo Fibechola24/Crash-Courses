@@ -11,71 +11,97 @@ body {
 
   /* flex-flow: row-reverse wrap; */
 
+  /* flex direction can be row, row-reverse, column, colum-reverse, flex-wrap means if you want the items to wrap within the container when browser width is reduced */
+  /* there is also wrap-reverse */
 
-/* flex direction can be row, row-reverse, column, colum-reverse, flex-wrap means if you want the items to wrap within the container when browser width is reduced */
-/* there is also wrap-reverse */
+  /*flex flow is a shorthand for flex direction and flex wrap  */
 
-/*flex flow is a shorthand for flex direction and flex wrap  */
+  /* column gap property; sets gap between column likewise row gap */
 
-
-
-/* column gap property; sets gap between column likewise row gap */
-
-/* flex-wrap: wrap;
+  /* flex-wrap: wrap;
 column-gap: 20px;
 row-gap: 30px; 
-gap: 40px 20px; */  /*this is shorthand for both column and row gap  */
+gap: 40px 20px; */ /*this is shorthand for both column and row gap  */
 
+  /* Alignment */
+  /* to see the alignment, we reduce the number of items from 9 to 5 */
+  /* justify-contents: flex-start, flex-end, center, space-between, space-around, space-evenly */
+  /*we can also use alignment for flex direction:columns;  */
 
+  /* justify-content: space-around; */
 
-/* Alignment */
-/* to see the alignment, we reduce the number of items from 9 to 5 */
-/* justify-contents: flex-start, flex-end, center, space-between, space-around, space-evenly */
-/*we can also use alignment for flex direction:columns;  */
+  /* Align item defines the behaviour for how items are laid out along the cross axis of the container*/
+  /* to see the changes we need height property */
+  /*align-items include; stretch, flex-start, flex-end, center, baseline  */
+  /* if you want the text inside the items to align, use baseline */
 
-/* justify-content: space-around; */
-
-
-/* Align item defines the behaviour for how items are laid out along the cross axis of the container*/
-/* to see the changes we need height property */
-/*align-items include; stretch, flex-start, flex-end, center, baseline  */
-/* if you want the text inside the items to align, use baseline */
-
-/* height: 800px;
+  /* height: 800px;
 align-items: baseline; */
 
-/* align-content property */
-/* multiple lines must exist in the container */
-/* align-content: flex-start, flex-end, center, space-between (it will create space between the rows), space-around  */
+  /* align-content property */
+  /* multiple lines must exist in the container */
+  /* align-content: flex-start, flex-end, center, space-between (it will create space between the rows), space-around  */
 }
 
+/* flex item properties */
+/* order, flex-grow, flex-shrink, flex, align-self */
 
-/*  */
+/*flex-grow property */
+/*fley-grow; we dont want to see extra spaces  */
+/* grow evenly set all items to 1 */
 
 
+/*flex-shrink items, items should shrink if necessary  */
+/*flex-shrink:0; items will not shrink but overflows right away  */
+
+
+
+/* flex basis specifies the initial space before the container i distributed  i.e the width of the text when its auto*/
 .flex-item {
   color: white;
   font-size: 1.5rem;
   padding: 1rem;
   text-align: center;
+  /* width: 6rem; */
+  /* flex-basis: auto; */
+  /* flex-grow: 1; */
+  /* flex-shrink: 0; */
+
+  /* flex: 2 5 200px; */
+
+  /* shorthand for flex grow, shrink, basis */
+  /*flex: 2 3 200px  */
+
+
+
+  /*align items, i.e align individual items  */
+  /* align-self; flex start,center, stretch,   */
+  height: 400px;
 }
 .item-1 {
   background-color: #b4bf35;
+  align-self: flex-start;
 }
 .item-2 {
   background-color: #b95f21;
+  align-self: flex-end;
 }
 .item-3 {
   background-color: #1c4c56;
+  /* order: 1; */
 }
 .item-4 {
   background-color: #cfb276;
+  /* order: 2; */
+  /* flex-shrink: 4; */
 }
 .item-5 {
   background-color: #6b0803;
+  /* flex-grow: 1; */
 }
 .item-6 {
   background-color: #1c4c56;
+  /* flex-grow: 3; */
 }
 .item-7 {
   background-color: #b95f21;
