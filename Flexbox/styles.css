@@ -1,7 +1,10 @@
 body {
   margin: 0;
 }
+
+
 .container {
+  display: inline-flex;      /* container will only take up the width around the children not the enitre width as in the case of flex which is block */
   border: 6px solid black;
 }
 .flex-item {
